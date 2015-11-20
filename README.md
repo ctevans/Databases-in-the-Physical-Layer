@@ -3,8 +3,26 @@ The goal of this project is to teach the concept of working with data in the phy
 
 This project is divided into three phases.
 
+    Phase 1: Parsing of a large volume of reviews.
+
+    Phase 2: Loading parsed files into a database.
+
+    Phase 3: Creating a query program / structure to access the database.
+
+
+Files of note:
+
+    [PYTHON] p2.py: Parses a given bulk file of reviews
+    
+    [SCRIPT] thisIsTheSortCommand: Sorts and removes duplicates within files produced by p2.py
+    
+    [PYTHON] loadIntoDatabase.py: The file that takes the sorted files from thisIsTheSortCommand and puts them into the database.
+    
+    
+
 ### Phase #1: Parsing
 Language: Python 3.x
+File associated with this: p2.py
 
 
 Given a huge dump of reviews... let's parse it into something that we can later load into a database and actually make use of.
@@ -33,6 +51,7 @@ This is written in python version 3.x, to run it I typically just called it on t
 
 #### Sorting and removal of duplicates
 Language: Shell scripting
+File associated with this: thisIsTheSortCommand
 
 
 Let's suppose for a second that we want to sort these files. Instead of making my own sort (I could happily write mergesort!) I am going to instead utilize the linux sort command here. Proven, stable, effective method. (Of course this now means this must be run on a linux system- perhaps in the future a change I could do IS to implement a sort function!)  
