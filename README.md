@@ -32,7 +32,7 @@ This is written in python version 3.x, to run it I typically just called it on t
 ### (But before that... the ever essential sorting!)
 
 #### Sorting and removal of duplicates
-Language: Basic scripting
+Language: Shell scripting
 
 
 Let's suppose for a second that we want to sort these files. Instead of making my own sort (I could happily write mergesort!) I am going to instead utilize the linux sort command here. Proven, stable, effective method. (Of course this now means this must be run on a linux system- perhaps in the future a change I could do IS to implement a sort function!)  
