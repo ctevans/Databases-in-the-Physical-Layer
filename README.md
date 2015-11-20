@@ -45,8 +45,14 @@ Putting this all together I came up with this lovely little line:
     mv exampleFile.txt exampleFile.bak && sort exampleFile.bak | uniq -u > exampleFile.txt
 
 ...Now of course one needs to realize that I have absolutely no ambition to rehash this every time I need to do this. So how did I solve this (lazy. lazy. lazy. lazy) problem? I made a shellscript... and this is infact in the repo as thisIsTheSortCommand file!
+I achieved this by just adding the following at the top of my file
+    #!bin/sh 
 
+Then I used chmod 755 to make this into something that can run 
+    chmod 755
 
+Following this, anytime I wanted to use all of these sort functions on all of the files that we were given/specified to do so I would be able to call the following line from the terminal.
+    ./thisIsTheSortCommand
 
 
 
