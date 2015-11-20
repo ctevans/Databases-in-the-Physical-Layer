@@ -12,8 +12,11 @@ to have the following present:
 This file will CREATE the following files:
 
 reviews.txt
+
 pterms.txt
+
 rterms.txt
+
 scores.txt
 
 
