@@ -17,6 +17,12 @@ Files of note:
     [SCRIPT] thisIsTheSortCommand: Sorts and removes duplicates within files produced by p2.py
     
     [PYTHON] loadIntoDatabase.py: The file that takes the sorted files from thisIsTheSortCommand and puts them into the database.
+
+Languages used:
+
+    Python 3.X: Carried the bulk of the workload in this project.
+    
+    Shell Script: Used to provide a gentle and easy-to-use way to provide a bridge between python programs
     
     
 
