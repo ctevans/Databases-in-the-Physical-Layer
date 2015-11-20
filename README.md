@@ -3,7 +3,7 @@ The goal of this project is to teach the concept of working with data in the phy
 
 This project is divided into three phases.
 
-#### Phase #1: Parsing
+### Phase #1: Parsing
 Given a huge dump of reviews... let's parse it into something that we can later load into a database and actually make use of.
 This is written in python version 3.x, to run it I typically just called it on the commandline. Below are some specifications of what this program needs to take in and what it will produce.
 
@@ -24,7 +24,7 @@ rterms.txt
 scores.txt
 
 
-#### Phase #2: Loading into our database (But before that... the ever essential sorting!)
+### Phase #2: Loading into our database (But before that... the ever essential sorting!)
 
 
 
