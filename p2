@@ -1,9 +1,0 @@
-#Open the file and only have it so that it is being read.
-f = open('10.txt', "r")
-
-#Read in the file line by line!
-
-while line:
-    print line
-    line = f.readline()
-f.close()

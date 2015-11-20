@@ -24,3 +24,4 @@ echo "Created file: ptermsPreppedForDB.txt for db_load"
 python3 dbLoadChangeFileFormat.py rterms.txt rtermsPreppedForDB.txt
 echo "Created file: rtermsPreppedForDB.txt for db_load"
 
+
