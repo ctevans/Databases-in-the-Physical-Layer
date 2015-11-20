@@ -10,18 +10,21 @@ rm reviewsPreppedForDB.txt
 rm ptermsPreppedForDB.txt
 rm rtermsPreppedForDB.txt
 
-echo "Removed all old prepared DB files just to be confident!"
+#echo "Removed all old prepared DB files just to be confident!"
 
 python3 dbLoadChangeFileFormat.py scores.txt scoresPreppedForDB.txt
-echo "Created file: scoresPreppedForDB.txt for db_load"
+#echo "Created file: scoresPreppedForDB.txt for db_load"
 
 python3 dbLoadChangeFileFormat.py reviews.txt reviewsPreppedForDB.txt
-echo "Created file: reviewsPreppedForDB.txt for db_load"
+#echo "Created file: reviewsPreppedForDB.txt for db_load"
 
 python3 dbLoadChangeFileFormat.py pterms.txt ptermsPreppedForDB.txt
-echo "Created file: ptermsPreppedForDB.txt for db_load"
+#echo "Created file: ptermsPreppedForDB.txt for db_load"
 
 python3 dbLoadChangeFileFormat.py rterms.txt rtermsPreppedForDB.txt
-echo "Created file: rtermsPreppedForDB.txt for db_load"
+#echo "Created file: rtermsPreppedForDB.txt for db_load"
 
 
+#echo "attempting to put the database together...."
+#echo "First let's try... putting into the db_lad the scores...."
+db_load -f scoresPreppedForDB.txt -t btree dbFile.db
