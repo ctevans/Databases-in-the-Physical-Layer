@@ -10,6 +10,7 @@ to have the following present:
 *Give it some sort of input file. (For now I have this hard coded, I may make it more flexible later.
 
 This file will CREATE the following files:
+
 reviews.txt
 pterms.txt
 rterms.txt
