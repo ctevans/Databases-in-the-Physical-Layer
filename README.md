@@ -10,10 +10,10 @@ to have the following present:
 *Give it some sort of input file. (For now I have this hard coded, I may make it more flexible later.
 
 This file will CREATE the following files:
-*reviews.txt
-*pterms.txt
-*rterms.txt
-*scores.txt
+reviews.txt
+pterms.txt
+rterms.txt
+scores.txt
 
 
 #### Phase #2: Loading into our database (But before that... the ever essential sorting!)
