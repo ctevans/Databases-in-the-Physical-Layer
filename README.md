@@ -54,6 +54,8 @@ Then I used chmod 755 to make this into something that can run
 Following this, anytime I wanted to use all of these sort functions on all of the files that we were given/specified to do so I would be able to call the following line from the terminal.
     ./thisIsTheSortCommand
 
+#### The Actual Loading
+
 
 
 ###MISC.
