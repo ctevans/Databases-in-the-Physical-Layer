@@ -4,6 +4,9 @@ The goal of this project is to teach the concept of working with data in the phy
 This project is divided into three phases.
 
 ### Phase #1: Parsing
+Language: Python 3.x
+
+
 Given a huge dump of reviews... let's parse it into something that we can later load into a database and actually make use of.
 This is written in python version 3.x, to run it I typically just called it on the commandline. Below are some specifications of what this program needs to take in and what it will produce.
 *Please refer to the sample inputs and outputs on the wiki if you are interested in specific examples!
@@ -29,6 +32,9 @@ This is written in python version 3.x, to run it I typically just called it on t
 ### (But before that... the ever essential sorting!)
 
 #### Sorting and removal of duplicates
+Language: Basic scripting
+
+
 Let's suppose for a second that we want to sort these files. Instead of making my own sort (I could happily write mergesort!) I am going to instead utilize the linux sort command here. Proven, stable, effective method. (Of course this now means this must be run on a linux system- perhaps in the future a change I could do IS to implement a sort function!)  
     sort exampleFile.txt
 
