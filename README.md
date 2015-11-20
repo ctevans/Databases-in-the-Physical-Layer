@@ -3,13 +3,13 @@ The goal of this project is to teach the concept of working with data in the phy
 
 This project is divided into three phases.
 
-## Phase #1, Given a huge dump of reviews... let's parse it into something that we can later load into a database and actually make use of.
+#### Phase #1, Given a huge dump of reviews... let's parse it into something that we can later load into a database and actually make use of.
 
 # Phase #2: Given the parsed files
 
 
 
-## Files:
+#### Files:
 #####"1k" 
  DESCRIPTION: ... Slightly more than 1,000 reviews. Closer to 1,000,000 reviews but not exactly 1million. This is a huge text file and has been placed here exclusively for testing purposes.
 
