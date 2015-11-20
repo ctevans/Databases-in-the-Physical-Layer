@@ -3,9 +3,20 @@ The goal of this project is to teach the concept of working with data in the phy
 
 This project is divided into three phases.
 
-#### Phase #1, Given a huge dump of reviews... let's parse it into something that we can later load into a database and actually make use of.
+#### Phase #1: Parsing
+Given a huge dump of reviews... let's parse it into something that we can later load into a database and actually make use of.
+This is written in python version 3.x, to run it I typically just called it on the commandline. This python file however EXPECTS
+to have the following present:
+*Give it some sort of input file. (For now I have this hard coded, I may make it more flexible later.
 
-# Phase #2: Given the parsed files
+This file will CREATE the following files:
+*reviews.txt
+*pterms.txt
+*rterms.txt
+*scores.txt
+
+
+#### Phase #2: Loading into our database (But before that... the ever essential sorting!)
 
 
 
