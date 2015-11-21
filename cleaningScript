@@ -1,0 +1,21 @@
+#!/bin/sh
+rm data.txt
+rm myindex.db
+rm myindex2.db
+rm myindex2.idx
+rm ptermsPreppedForDB.txt
+rm rtermsPreppedForDB.txt
+rm scoresPreppedForDB.txt
+rm reviewsPreppedForDB.txt
+rm reviews.txt
+rm pterms.txt
+rm scores.txt
+rm rterms.txt
+rm trial.py
+rm rt.idx
+rm pt.idx
+rm sc.idx
+rm rw.idx
+rm reviewstemp.txt
+clear
+echo "Cleaned out the garbage!"
