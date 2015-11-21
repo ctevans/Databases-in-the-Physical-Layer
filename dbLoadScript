@@ -35,7 +35,7 @@ rm sc.idx
 
 #echo "attempting to put the database together...."
 #echo "First let's try... putting into the db_lad the scores...."
-cat reviewsPreppedForDB.txt | db_load -c duplicates=1 -T -t btree rw.idx
+cat reviewsPreppedForDB.txt | db_load -c duplicates=1 -T -t hash rw.idx
 
 
 cat ptermsPreppedForDB.txt | db_load -c duplicates=1 -T -t btree pt.idx
@@ -43,4 +43,6 @@ cat ptermsPreppedForDB.txt | db_load -c duplicates=1 -T -t btree pt.idx
 cat rtermsPreppedForDB.txt | db_load -c duplicates=1 -T -t btree rt.idx
 
 cat scoresPreppedForDB.txt | db_load -c duplicates=1 -T -t btree sc.idx
+
+echo "If you saw no error messages here we prepped files and made indexes successfully"
 
