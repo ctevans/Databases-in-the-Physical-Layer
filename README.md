@@ -63,7 +63,7 @@ Now everything is ready for phase 3.
 
     Phase 1: Parsing of a large volume of reviews.
 
-    Phase 2: Loading parsed files into a database.
+    Phase 2: Loading parsed files into a database. (With four specialized indexes!)
 
     Phase 3: Creating a query program / structure to access the database.
 
