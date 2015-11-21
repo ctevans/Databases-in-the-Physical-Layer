@@ -27,4 +27,4 @@ python3 dbLoadChangeFileFormat.py rterms.txt rtermsPreppedForDB.txt
 
 #echo "attempting to put the database together...."
 #echo "First let's try... putting into the db_lad the scores...."
-db_load -f scoresPreppedForDB.txt -t btree dbFile.db
+db_load -f scoresPreppedForDB.txt -t btree sc.idx
