@@ -1,0 +1,37 @@
+#!/bin/bash
+#Because I am a lazy bastard and refuse to type all those commands.
+
+#First off the reviews.txt file.
+mv reviewsGIVEN.txt reviews.bak && sort reviews.bak | uniq -u > reviewsGIVEN.txt
+
+
+#Secondly, the scores.txt file
+
+mv scoresGIVEN.txt scores.bak && sort scores.bak | uniq -u > scoresGIVEN.txt
+
+
+#Thirdly, the rterms.txt file.
+mv rtermsGIVEN.txt rterms.bak && sort rterms.bak | uniq -u > rtermsGIVEN.txt
+
+
+
+#Finally (fourthly) the pterms.txt file.
+mv ptermsGIVEN.txt pterms.bak && sort pterms.bak | uniq -u > ptermsGIVEN.txt
+
+
+
+#Delete the .bak files! 
+#Yes I realize I could use a blanket statement to delete them but I am 
+#SIGNIFICANTLY more comfortable actually deleting them one by one
+#"manually" like this!
+
+rm reviews.bak
+
+rm scores.bak
+
+rm rterms.bak
+
+rm pterms.bak
+
+echo "... Everything is done, I hope! :)"
+echo "File sorting should have been successful!"
