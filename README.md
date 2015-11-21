@@ -72,28 +72,31 @@ Files of note:
 
     [PYTHON] p2.py: Parses a given bulk file of reviews in depth. Produces 4 heavily parsed text files.
     
-    [SCRIPT] thisIsTheSortCommand: Sorts and removes duplicates within files produced by p2.py and maintains original file names.
+    [SCRIPT] thisIsTheSortCommand: Sorts and removes duplicates within files produced by p2.py and maintains original file 
+              names.
     
-    [PYTHON] loadIntoDatabase.py: The file that takes the sorted files from thisIsTheSortCommand and puts them into the database.
+    [PYTHON] loadIntoDatabase.py: The file that takes the sorted files from thisIsTheSortCommand and puts them into the 
+             database.
     
-    [SCRIPT] dbLoadScript: Will run through the python3 program dbLoadChangeFileFormat.py and prep files. Will then take each of
-             these prepared files and will put them into the database indexes we desire using db_load.
+    [SCRIPT] dbLoadScript: Will run through the python3 program dbLoadChangeFileFormat.py and prep files. Will then take 
+             each of these prepared files and will put them into the database indexes we desire using db_load.
              
-    [PYTHON] dbLoadChangeFileFormat: Will take in a text file after being processed and will modify the format to be acceptable
-             to be used with the db_load command. 
+    [PYTHON] dbLoadChangeFileFormat: Will take in a text file after being processed and will modify the format to be 
+             acceptable to be used with the db_load command. 
              
-    [SCRIPT] cleaningScript: Our directory can become a mess after running everything. So how should this be solved? Making a
-             fairly straightforward easy-to-use method that will remove ANYTHING that I've seen be made before from the directory.
+    [SCRIPT] cleaningScript: Our directory can become a mess after running everything. So how should this be solved? Making
+            a fairly straightforward easy-to-use method that will remove ANYTHING that I've seen be made before from the 
+            directory.
              
-    [SCRIPT] showWhatIsInDatabases: This is going to be a useful script for testing. We cannot simply use VIM or emacs to open up
-             the database. So what I have here is an easy-to-use user-friendly script that will dump all of the data currently
-             present within our indexes into four seperate files. This makes it easy to open in one's fave text editor and check
-             for consistency. 
+    [SCRIPT] showWhatIsInDatabases: This is going to be a useful script for testing. We cannot simply use VIM or emacs to open
+             up the database. So what I have here is an easy-to-use user-friendly script that will dump all of the data 
+             currently present within our indexes into four seperate files. This makes it easy to open in one's fave text editor
+             and check for consistency. 
              
     [SCRIPT] justDoIt: As Shia LeBeouf said... just do it!
-             What this script will do is it will just connect all of these files together and dodge the hilarious irritation of trying
-             to string all these various commands together. No! NO! Instead you can just run this command in the terminal and then in
-             doing so you actually just produced the 4 index files and only typed in a single line! 
+             What this script will do is it will just connect all of these files together and dodge the hilarious irritation 
+             of trying to string all these various commands together. No! NO! Instead you can just run this command in the 
+             terminal and then in doing so you actually just produced the 4 index files and only typed in a single line! 
 
 Languages used:
 
