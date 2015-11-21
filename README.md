@@ -7,11 +7,14 @@ Here is how to get started:
 Type in the following commands in order in the terminal:
 
 1: python3 p2.py
+
 2: ./thisIsTheSortCommand
+
 3: ./dbLoadScript
 
 Boom. Part 1 and part 2 done.
 Now you have the 4 files to begin processing.
+
 
 
 
