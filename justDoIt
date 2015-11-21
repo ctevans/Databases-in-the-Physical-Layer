@@ -1,0 +1,10 @@
+#!/bin/sh
+python3 p2.py
+chmod 755 thisIsTheSortCommand
+./thisIsTheSortCommand
+chmod 755 dbLoadScript
+./dbLoadScript
+
+echo ""
+echo "Alright now if you see THIS message then you should now have the four"
+echo "files you need... which are the rt.idx, sc.idx, rw.idx, pt.idx"
