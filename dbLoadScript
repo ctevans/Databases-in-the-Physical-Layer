@@ -35,7 +35,7 @@ rm sc.idx
 
 #echo "attempting to put the database together...."
 #echo "First let's try... putting into the db_lad the scores...."
-cat rtermsPreppedForDB.txt | db_load -c duplicates=1 -T -t btree rw.idx
+cat reviewsPreppedForDB.txt | db_load -c duplicates=1 -T -t btree rw.idx
 
 
 cat ptermsPreppedForDB.txt | db_load -c duplicates=1 -T -t btree pt.idx

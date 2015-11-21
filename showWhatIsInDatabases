@@ -1,5 +1,6 @@
-db_dump rw.idx -p
-db_dump rt.idx -p
-db_dump pt.idx -p
-db_dump sc.idx -p
+db_dump rw.idx -p > dbDumpFilerw
+db_dump rt.idx -p > dbDumpFilert
+db_dump pt.idx -p > dbDumpFilept
+db_dump sc.idx -p > dbDumpFilesc
+echo "Open the files dbDumpFile(Type) to check. Should look the same as the input"
 

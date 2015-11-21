@@ -17,5 +17,13 @@ rm pt.idx
 rm sc.idx
 rm rw.idx
 rm reviewstemp.txt
+rm rwDBDumpFile
+rm rtDBDumpFile
+rm ptDBDumpFile
+rm scDBDumpFile
+rm dbDumpFilerw
+rm dbDumpFilert
+rm dbDumpFilept
+rm dbDumpFilesc
 clear
 echo "Cleaned out the garbage!"
