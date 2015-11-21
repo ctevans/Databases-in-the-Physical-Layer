@@ -2,21 +2,21 @@
 #Because I am a lazy bastard and refuse to type all those commands.
 
 #First off the reviews.txt file.
-mv reviewsGIVEN.txt reviews.bak && sort reviews.bak | uniq -u > reviewsGIVEN.txt
+mv reviewsGIVEN.txt reviews.bak && sort reviewsGIVEN.bak | uniq -u > reviewsGIVEN.txt
 
 
 #Secondly, the scores.txt file
 
-mv scoresGIVEN.txt scores.bak && sort scores.bak | uniq -u > scoresGIVEN.txt
+mv scoresGIVEN.txt scores.bak && sort scoresGIVEN.bak | uniq -u > scoresGIVEN.txt
 
 
 #Thirdly, the rterms.txt file.
-mv rtermsGIVEN.txt rterms.bak && sort rterms.bak | uniq -u > rtermsGIVEN.txt
+mv rtermsGIVEN.txt rterms.bak && sort rtermsGIVEN.bak | uniq -u > rtermsGIVEN.txt
 
 
 
 #Finally (fourthly) the pterms.txt file.
-mv ptermsGIVEN.txt pterms.bak && sort pterms.bak | uniq -u > ptermsGIVEN.txt
+mv ptermsGIVEN.txt pterms.bak && sort ptermsGIVEN.bak | uniq -u > ptermsGIVEN.txt
 
 
 
@@ -25,13 +25,13 @@ mv ptermsGIVEN.txt pterms.bak && sort pterms.bak | uniq -u > ptermsGIVEN.txt
 #SIGNIFICANTLY more comfortable actually deleting them one by one
 #"manually" like this!
 
-rm reviews.bak
+rm reviewsGIVEN.bak
 
-rm scores.bak
+rm scoresGIVEN.bak
 
-rm rterms.bak
+rm rtermsGIVEN.bak
 
-rm pterms.bak
+rm ptermsGIVEN.bak
 
 echo "... Everything is done, I hope! :)"
 echo "File sorting should have been successful!"
