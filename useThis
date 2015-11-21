@@ -5,10 +5,10 @@ chmod 755 thisIsTheSortCommandThatWorks
 
 
 
-rm scoresPreppedForDB.txt
-rm reviewsPreppedForDB.txt
-rm ptermsPreppedForDB.txt
-rm rtermsPreppedForDB.txt
+rm scoresPreppedForDBGIVEN.txt
+rm reviewsPreppedForDBGIVEN.txt
+rm ptermsPreppedForDBGIVEN.txt
+rm rtermsPreppedForDBGIVEN.txt
 
 #echo "Removed all old prepared DB files just to be confident!"
 
