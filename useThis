@@ -1,7 +1,7 @@
 #!/bin/bash
 
 chmod 755 thisIsTheSortCommandThatWorks
-./thisIsTheSortCommandThatworks
+./thisIsTheSortCommandThatWorks
 
 
 

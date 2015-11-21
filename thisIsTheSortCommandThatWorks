@@ -2,21 +2,21 @@
 #Because I am a lazy bastard and refuse to type all those commands.
 
 #First off the reviews.txt file.
-mv reviewsGIVEN.txt reviews.bak && sort reviewsGIVEN.bak | uniq -u > reviewsGIVEN.txt
+mv reviewsGIVEN.txt reviewsGIVEN.bak && sort reviewsGIVEN.bak | uniq -u > reviewsGIVEN.txt
 
 
 #Secondly, the scores.txt file
 
-mv scoresGIVEN.txt scores.bak && sort scoresGIVEN.bak | uniq -u > scoresGIVEN.txt
+mv scoresGIVEN.txt scoresGIVEN.bak && sort scoresGIVEN.bak | uniq -u > scoresGIVEN.txt
 
 
 #Thirdly, the rterms.txt file.
-mv rtermsGIVEN.txt rterms.bak && sort rtermsGIVEN.bak | uniq -u > rtermsGIVEN.txt
+mv rtermsGIVEN.txt rtermsGIVEN.bak && sort rtermsGIVEN.bak | uniq -u > rtermsGIVEN.txt
 
 
 
 #Finally (fourthly) the pterms.txt file.
-mv ptermsGIVEN.txt pterms.bak && sort ptermsGIVEN.bak | uniq -u > ptermsGIVEN.txt
+mv ptermsGIVEN.txt ptermsGIVEN.bak && sort ptermsGIVEN.bak | uniq -u > ptermsGIVEN.txt
 
 
 
