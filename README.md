@@ -6,12 +6,56 @@ The goal of this project is to teach the concept of working with data in the phy
 Here is how to get started:
 Type in the following commands in order in the terminal:
 
-1: chmod 755 justDoIt
+1: chmod 755 justDoIt (incase it isn't executable yet)
 2: ./justDoIt
 
 Boom. Part 1 and part 2 done.
 Now you have the 4 files to begin processing.
 
+Want to clean the directory of all of the produced files and leave only core essential files and tester files?
+
+1: chmod 755 cleaningScript (incase it isn't executable yet)
+2: ./cleaningScript
+
+Want to actually see what is present in the database files ("index files")?
+
+1: chmod 755 showWhatIsInDatabase
+2: ./showWhatIsInDatabase
+
+This will produce four files that will contain in themselves the full contents of the databases. Makes it simpler to check. Could even run diff on it if you wanted. These files should look the exact same as the input prettymuch.
+
+IE:
+*Some misc database specification information here*
+
+ key1
+ 
+ value1
+ 
+ key2
+ 
+ value2
+ 
+ key3
+ 
+ value3
+ 
+ key4
+ 
+ value4
+ 
+...
+
+The file names are as follows:
+
+dbDumpFilerw
+
+dbDumpFilert
+
+dbDumpFilept
+
+dbDumpFilesc
+
+Now everything is ready 
 
 
 
