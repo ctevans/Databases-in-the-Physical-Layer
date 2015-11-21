@@ -25,6 +25,22 @@ python3 dbLoadChangeFileFormat.py rterms.txt rtermsPreppedForDB.txt
 #echo "Created file: rtermsPreppedForDB.txt for db_load"
 
 
+
+#Remove old database files before loading new ones.
+
+rm rw.idx
+rm pt.idx
+rm rt.idx
+rm sc.idx
+
 #echo "attempting to put the database together...."
 #echo "First let's try... putting into the db_lad the scores...."
-db_load -f scoresPreppedForDB.txt -t btree sc.idx
+cat rtermsPreppedForDB.txt | db_load -T -t btree rw.idx
+
+
+cat ptermsPreppedForDB.txt | db_load -T -t btree pt.idx
+
+cat rtermsPreppedForDB.txt | db_load -T -t btree rt.idx
+
+cat scoresPreppedForDB.txt | db_load -T -t btree sc.idx
+

@@ -1,0 +1,5 @@
+db_dump rw.idx -p
+db_dump rt.idx -p
+db_dump pt.idx -p
+db_dump sc.idx -p
+
