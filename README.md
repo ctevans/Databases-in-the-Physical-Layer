@@ -88,10 +88,10 @@ Files of note:
             a fairly straightforward easy-to-use method that will remove ANYTHING that I've seen be made before from the 
             directory.
              
-    [SCRIPT] showWhatIsInDatabases: This is going to be a useful script for testing. We cannot simply use VIM or emacs to open
-             up the database. So what I have here is an easy-to-use user-friendly script that will dump all of the data 
-             currently present within our indexes into four seperate files. This makes it easy to open in one's fave text editor
-             and check for consistency. 
+    [SCRIPT] showWhatIsInDatabases: This is going to be a useful script for testing. We cannot simply use VIM or emacs to 
+             open up the database. So what I have here is an easy-to-use user-friendly script that will dump all of the 
+             data currently present within our indexes into four seperate files. This makes it easy to open in one's fave
+             text editor and check for consistency. 
              
     [SCRIPT] justDoIt: As Shia LeBeouf said... just do it!
              What this script will do is it will just connect all of these files together and dodge the hilarious irritation 
