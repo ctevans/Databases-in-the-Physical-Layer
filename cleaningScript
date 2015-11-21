@@ -25,5 +25,11 @@ rm dbDumpFilerw
 rm dbDumpFilert
 rm dbDumpFilept
 rm dbDumpFilesc
+
+rm rtermsPreppedForDBGIVEN.txt
+rm ptermsPreppedForDBGIVEN.txt
+rm reviewsPreppedForDBGIVEN.txt
+rm scoresPreppedForDBGIVEN.txt
+
 clear
 echo "Cleaned out the garbage!"
