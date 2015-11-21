@@ -1,7 +1,21 @@
 # Databases-in-the-Physical-Layer
 The goal of this project is to teach the concept of working with data in the physical layer. This is done by building an information retrieval system, using the Berkeley DB library for operating on files and indices. Your job in this project is to write programs that keep data in files and maintain indices that provide basic searches over data. 
 
-This project is divided into three phases.
+
+#### "Shhhh Just tell me how to use it so I can get started!"
+Here is how to get started:
+Type in the following commands in order in the terminal:
+
+1: python3 p2.py
+2: ./thisIsTheSortCommand
+3: ./dbLoadScript
+
+Boom. Part 1 and part 2 done.
+Now you have the 4 files to begin processing.
+
+
+
+####This project is divided into three phases.
 
     Phase 1: Parsing of a large volume of reviews.
 
