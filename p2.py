@@ -3,7 +3,7 @@ import collections
 import re
 
 #Open the file and only have it so that it is being read.
-f = open('10.txt', "r")
+f = open('100k.txt', "r")
 
 #Now here are all of the files we will be writing to.
 #This one is the main big file we will write to.
