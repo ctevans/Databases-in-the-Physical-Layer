@@ -1,4 +1,5 @@
-from bsddb3 import db 
+from bsddb3 import db
+import re
 #Get an instance of BerkeleyDB
 def main():
 
@@ -8,7 +9,7 @@ def main():
 		qList = []
 		database = db.DB() 
 		reviewDB = db.DB()
-		reviewDB.open("rw.idx", None, db.DB_HASH, db.DB_CREATE)
+		reviewDB.open("rw.idx")
 
 		user_input = input("Enter your queries here: ")
 		if user_input.find(":") != -1:
@@ -24,16 +25,22 @@ def main():
 
 
 		if Dname == "p":
-                        database.open("pt.idx", None, db.DB_BTREE, db.DB_CREATE)
+			database.open("pt.idx")
 		elif Dname == "r":
-			database.open("rt.idx", None, db.DB_BTREE, db.DB_CREATE)
+			database.open("rt.idx")
 		elif Dname == "rs":
-			database.open("sc.idx", None, db.DB_BTREE, db.DB_CREATE)
+			database.open("sc.idx")
+		else:
+			database.open("rw.idx")
 
 		cur = database.cursor()
 		rcur = reviewDB.cursor()
 
 		for i in split_input:
+			if "%" in i:
+				print(i)
+				i = i.replace("%","??")
+			print(i)
 			if Dname != "" :
 				iter = cur.first()
 				while iter:
@@ -41,17 +48,19 @@ def main():
 						if iter[1].decode("utf-8") not in qList:
 							qList.append(iter[1].decode("utf-8"))
 					iter = cur.next()
-			# elif Dname == "" :
-			# 	iter = rcur.first()
-			# 	while iter:
-			# 		if i in iter[1].decode("utf-8"):
-			# 			print(iter[0].decode("utf-8"))
-			# 		# if iter[0].decode("utf-8") in qList:
+			elif Dname == "" :
+				iter = cur.first()
+				while iter:
+					if i in iter[1].decode("utf-8"):
+						if iter[0].decode("utf-8") not in qList:
+			 				qList.append(iter[0].decode("utf-8"))
+					iter = cur.next()
+
+
 
 
 		rcur.close()
 		cur.close()
-		print(qList)
 		rcur = reviewDB.cursor()
 		if qList == []:
 			print("Sorry we do not have any data on your queries.")
@@ -59,14 +68,15 @@ def main():
 		while iter:
 			if iter[0].decode("utf-8") in qList:
 				fOut = iter[1].decode("utf-8")
-				fOut =fOut.replace(',', '')
 				fOut = fOut.split('"')
-				print("Product ID:",fOut[0])
-				print("Product Name:",fOut[1])
-				print("Product Price:",fOut[2])
-				print("User Name:",fOut[3])
-				print("Review Title:",fOut[5])
-				print("Full Review:",fOut[7])
+				price =fOut[2].split(",")
+				price = price[1]
+				print("Product ID:",fOut[0].replace(',', ''))
+				print("Product Name:",fOut[1].replace(',', ''))
+				print("Product Price:",price)
+				print("User Name:",fOut[3].replace(',', ''))
+				print("Review Title:",fOut[5].replace(',', ''))
+				print("Full Review:",fOut[7].replace(',', ''))
 				print("*===============================*")
 			iter = rcur.next()
 		rcur.close()
