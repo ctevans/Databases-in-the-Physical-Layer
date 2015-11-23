@@ -3,7 +3,7 @@ import collections
 import re
 
 #Open the file and only have it so that it is being read.
-f = open('100k.txt', "r")
+f = open('10.txt', "r")
 
 #Now here are all of the files we will be writing to.
 #This one is the main big file we will write to.
@@ -49,14 +49,17 @@ while line:
     if splittingFunction[0] =="product/title":
         titleSplitString = splittingFunction[1].split()
         for word in titleSplitString:
+            
             word = word.lower()
 
             word = "".join([c if c.isalnum() else " " for c in word])
-            if len(word) > 2:
-                termsSplitString = splittingFunction[1].strip('\n')
-                ptermsTextFile.write(word)
-                ptermsTextFile.write(",")
-                ptermsTextFile.write(str(counter) + "\n") 
+            wordSplit = word.split()
+            for wordy in wordSplit:
+                if len(wordy) > 2:
+                    termsSplitString = splittingFunction[1].strip('\n')
+                    ptermsTextFile.write(wordy)
+                    ptermsTextFile.write(",")
+                    ptermsTextFile.write(str(counter) + "\n") 
 
 
 #####################
