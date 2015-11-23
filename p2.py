@@ -70,17 +70,23 @@ while line:
 ######################
 
     
+    removeTheseChars = ["\\", "/", "|", "-", "_", "(", ")", "[", "]", "{", "}", "!", "?", "*", "%", "$", "#", "@", "~", "`", ".", ",", ":", ";", "^", "$", "@", "'s"]
     if (splittingFunction[0] =="review/summary") or (splittingFunction[0] == "review/text"):
         termsSplitString = splittingFunction[1].split()
         for word in termsSplitString:
             word = word.lower()
-
-            word = "".join([c if c.isalnum() else "" for c in word])
-            if len(word) > 2:  
-                termsSplitString = splittingFunction[1].strip('\n')
-                rtermsTextFile.write(word)
-                rtermsTextFile.write(",")
-                rtermsTextFile.write(str(counter) + "\n")
+            for character in removeTheseChars:
+                word = word.replace(character, " ")
+            wordySplit = word.split()
+            for word in wordySplit:
+                word = "".join([c if c.isalnum() else "" for c in word])
+                if len(word) > 2:  
+                    
+                    termsSplitString = splittingFunction[1].strip('\n')
+                    word = word.replace("quot", "")
+                    rtermsTextFile.write(word)
+                    rtermsTextFile.write(",")
+                    rtermsTextFile.write(str(counter) + "\n")
 
 
 
