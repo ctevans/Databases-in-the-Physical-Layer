@@ -24,11 +24,11 @@ def main():
 
 
 		if Dname == "p":
-			database.open("pt.idx", None, db.DB_HASH, db.DB_CREATE)
+                        database.open("pt.idx", None, db.DB_BTREE, db.DB_CREATE)
 		elif Dname == "r":
-			database.open("rt.idx", None, db.DB_HASH, db.DB_CREATE)
+			database.open("rt.idx", None, db.DB_BTREE, db.DB_CREATE)
 		elif Dname == "rs":
-			database.open("sc.idx", None, db.DB_HASH, db.DB_CREATE)
+			database.open("sc.idx", None, db.DB_BTREE, db.DB_CREATE)
 
 		cur = database.cursor()
 		rcur = reviewDB.cursor()
