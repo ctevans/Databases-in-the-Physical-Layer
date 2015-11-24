@@ -14,6 +14,13 @@ def updateList(tList, uList, cNum):
 def main():
 	Runtime = True
 	while Runtime:
+                minPrice = 0
+                maxPrice = float("inf")
+		minRscore = 0
+		maxRscore = float("inf")		
+		priceCondition = False
+
+		dateCondition = False
 		tList = []
 		uList = []
 		Dname = ""
@@ -30,6 +37,7 @@ def main():
 		user_input = input("Enter your queries here: ")
 		r_input = user_input.split()
 		for i in range(len(r_input)):
+			
 			if r_input[i] == ">" or r_input[i] == "<":
 				r_input[i] = r_input[i-1] + r_input[i] + r_input[i+1]
 				r_input[i-1] = ""
@@ -45,7 +53,19 @@ def main():
 				split_input[i] = split_input[i].replace("%","*")
 
 		for i in range(len(split_input)):
-			if split_input[i].find(":") != -1 :
+			if split_input[i].find("pprice") != -1 :
+				priceCondition = True
+				for item in split_input[i]:
+					if item not in "<>pprice":
+						price = item
+						
+				if ((split_input[i][0]=="pprice" and split_input[i][1]==">") or (split_input[i][2]=="pprice" and split_input[i][1]=="<")):
+					minPrice = float(price)
+				else:
+					maxPrice = float(price)
+								
+				
+			elif split_input[i].find(":") != -1 :
 				xplit = split_input[i].split(":")
 				Dname = xplit[0]
 				if Dname == "p":
@@ -110,18 +130,24 @@ def main():
 			print("Sorry we do not have any data on your queries.")
 		iter = rcur.first()
 		while iter:
+                        
+			
 			if iter[0].decode("utf-8") in uList:
+				conditionsMet=True
 				fOut = iter[1].decode("utf-8")
 				fOut = fOut.split('"')
 				price =fOut[2].split(",")
 				price = price[1]
-				print("Product ID:",fOut[0].replace(',', ''))
-				print("Product Name:",fOut[1].replace(',', ''))
-				print("Product Price:",price)
-				print("User Name:",fOut[3].replace(',', ''))
-				print("Review Title:",fOut[5].replace(',', ''))
-				print("Full Review:",fOut[7].replace(',', ''))
-				print("*===============================*")
+				if ((priceCondition) and (price=="unknown" or (float(price) > maxPrice) or (float(price) < minPrice))):
+					conditionsMet=False
+                                if (conditionsMet):
+                                        print("Product ID:",fOut[0].replace(',', ''))
+                                        print("Product Name:",fOut[1].replace(',', ''))
+                                        print("Product Price:",price)
+                                        print("User Name:",fOut[3].replace(',', ''))
+                                        print("Review Title:",fOut[5].replace(',', ''))
+                                        print("Full Review:",fOut[7].replace(',', ''))
+                                        print("*===============================*")
 			iter = rcur.next()
 		rcur.close()
 
@@ -176,4 +202,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+        main()
