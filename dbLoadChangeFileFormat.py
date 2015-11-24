@@ -22,8 +22,8 @@ while line:
     line.strip('\n') 
     splittingFunction = line.split(",",1)
 
-
-    outputFile.write(splittingFunction[0].strip())
-    outputFile.write("\n")
-    outputFile.write(splittingFunction[-1].strip())
-    outputFile.write("\n")
+    if splittingFunction[0].strip() != "" and splittingFunction[1].strip() != "":
+        outputFile.write(splittingFunction[0].strip())
+        outputFile.write("\n")
+        outputFile.write(splittingFunction[-1].strip())
+        outputFile.write("\n")
