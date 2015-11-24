@@ -1,5 +1,5 @@
 from bsddb3 import db
-import sys
+import sys 
 import string
 import math
 import re
@@ -48,18 +48,32 @@ def main():
                                 split_input.append(i)
                 cNum = len(split_input)
 
+
+                
                 for i in range(len(split_input)):
+                        
                         if "%" in split_input[i]:
                                 split_input[i] = split_input[i].replace("%","*")
 
                 for i in range(len(split_input)):
                         if split_input[i].find("pprice") != -1 :
+                                split_input2 = []
                                 priceCondition = True
-                                for item in split_input[i]:
+                                for char in split_input[i]:
+                                        if (char==">"):
+                                                split_input2 = split_input[i].split(">")
+                                                split_input2.append(split_input2[1])
+                                                split_input2[1]=">"
+                                        if (char=="<"):
+                                                split_input2 = split_input[i].split("<")
+                                                split_input2.append(split_input2[1])
+                                                split_input2[1]="<"
+                                
+                                for item in split_input2:
                                         if ((item !="pprice") or (item !=">") or (item !="<")):
                                                 price = item
                                                 
-                                if ((split_input[i][0]=="pprice" and split_input[i][1]==">") or (split_input[i][2]=="pprice" and split_input[i][1]=="<")):
+                                if ((split_input2[0]=="pprice" and split_input2[1]==">") or (split_input2[2]=="pprice" and split_input[1]=="<")):
                                         minPrice = float(price)
                                 else:
                                         maxPrice = float(price)
@@ -140,6 +154,7 @@ def main():
                                 price = price[1]
                                 if ((priceCondition) and (price=="unknown" or (float(price) > maxPrice) or (float(price) < minPrice))):
                                         conditionsMet=False
+                                print(conditionsMet)
                                 if (conditionsMet):
                                         print("Product ID:",fOut[0].replace(',', ''))
                                         print("Product Name:",fOut[1].replace(',', ''))
