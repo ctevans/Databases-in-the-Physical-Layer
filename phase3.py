@@ -56,7 +56,9 @@ def main():
                                 split_input[i] = split_input[i].replace("%","*")
 
                 for i in range(len(split_input)):
+                        
                         if split_input[i].find("pprice") != -1 :
+                                cNum = cNum - 1
                                 split_input2 = []
                                 priceCondition = True
                                 for char in split_input[i]:
@@ -138,7 +140,7 @@ def main():
                                 tList.append(t)
                         qList = []
                 uList = updateList(tList,uList,cNum)
-
+                
                 rcur = reviewDB.cursor()
                 if uList == []:
                         print("Sorry we do not have any data on your queries.")
