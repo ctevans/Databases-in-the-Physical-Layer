@@ -8,7 +8,12 @@ Type in the following commands in order in the terminal:
 
 1: chmod 755 justDoIt (incase it isn't executable yet)
 2: ./justDoIt
+3: python3 phase3.py 
 
+Now you can run your queries FROM this python3 phase3.py file that we started!
+
+
+(A little more details... for 1/2)
 Boom. Part 1 and part 2 done.
 Now you have the 4 files to begin processing.
 
