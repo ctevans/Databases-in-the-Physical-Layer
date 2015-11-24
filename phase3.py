@@ -34,7 +34,11 @@ def main():
                 database_sc.open("sc.idx")
                 reviewDB.open("rw.idx")
                 split_input = []
-                user_input = input("Enter your queries here: ")
+                user_input = input("Enter your queries here (or enter exit to exit): ")
+                if user_input.lower() == "exit":
+                        print("Goodbye")
+                        Runtime = False
+                        return
                 r_input = user_input.split()
                 for i in range(len(r_input)):
                         
@@ -80,6 +84,8 @@ def main():
                                 else:
                                         maxPrice = float(price)
                                                                 
+                        elif split_input[i].find("rdate") != -1:
+                                cNum = cNum - 1
                                 
                         elif split_input[i].find(":") != -1 :
                                 xplit = split_input[i].split(":")
@@ -156,7 +162,7 @@ def main():
                                 price = price[1]
                                 if ((priceCondition) and (price=="unknown" or (float(price) > maxPrice) or (float(price) < minPrice))):
                                         conditionsMet=False
-                                print(conditionsMet)
+                                        
                                 if (conditionsMet):
                                         print("Product ID:",fOut[0].replace(',', ''))
                                         print("Product Name:",fOut[1].replace(',', ''))
@@ -207,11 +213,7 @@ def main():
 
         #       rcur.close()
         #       cur.close()
-                Termniate = input("Is that all? (T/F) :")
-                if Termniate == "T":
-                        Runtime = False
-                else:
-                        Runtime = True
+                
         database_pt.close()
         database_rt.close()
         database_sc.close()
