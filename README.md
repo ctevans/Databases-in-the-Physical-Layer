@@ -18,7 +18,7 @@ Boom. Part 1 and part 2 done.
 Now you have the 4 files to begin processing.
 
 Want to clean the directory of all of the produced files and leave only core essential files and tester files?
-
+ 
 1: chmod 755 cleaningScript (incase it isn't executable yet)
 2: ./cleaningScript
 
